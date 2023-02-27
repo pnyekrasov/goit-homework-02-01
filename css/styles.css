@@ -21,8 +21,8 @@ body {
   letter-spacing: 0.02em;
 }
 
-.dmarker {
-  list-style: none;
+li {
+  list-style: none; /* Remove markers */
 }
 
 .logo {
@@ -32,10 +32,20 @@ body {
   font-size: 18px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.possibilities .main-title,
-.portfolio {
+.link {
+  text-decoration: none;
+}
+
+.nav {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.possibilities .section-title,
+.portfolio .section-title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -49,56 +59,55 @@ body {
   overflow: hidden;
 }
 
-.title {
+.section-title,
+.section-subtitle {
+  color: var(--dark);
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.section-subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 /* Header */
 
 /* Logo  */
 
-.logo {
-  text-decoration: none;
-}
 .logo-hpart {
   color: var(--dark);
 }
 
 /* Nav links & Contacts*/
 
-.site-nav {
-  font-weight: 500;
-}
-
-.site-nav .link {
-  color: var(--dark);
-  text-decoration: none;
-}
-
-.site-nav .link-current {
+.nav:hover,
+.nav:focus,
+.current {
   color: var(--pressed-state);
-  text-decoration: none;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: gray;
-}
-
-.site-address {
+.cont {
   font-style: normal;
-}
-
-.site-address .cont {
   color: var(--text);
-  text-decoration: none;
-  font-style: normal;
 }
 
-.site-address .cont:hover,
-.site-address .cont:focus {
+.cont:hover,
+.cont:focus {
   color: var(--pressed-state);
 }
 
@@ -109,6 +118,7 @@ body {
 .hero {
   background-color: var(--dark);
 }
+
 .hero-title {
   color: var(--body-background);
   font-size: 56px;
@@ -116,44 +126,14 @@ body {
   text-align: center;
 }
 
-.hero-button {
+.hero-but {
   color: var(--body-background);
   background-color: var(--primary-brand);
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
 }
 
-.hero-button:hover,
-.hero-button:focus {
-  background-color: var(--primary-brand);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.19;
-}
-
-.hero-button:active {
+.hero-but:hover,
+.hero-but:focus {
   background-color: var(--pressed-state);
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-/* Other sections */
-
-.works .main-title,
-.team .main-title,
-.possibilities-list .title,
-.team-photo .title {
-  color: var(--dark);
-}
-
-.main-title {
-  color: var(--dark);
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
 }
 
 /* Our Team */
@@ -166,11 +146,6 @@ body {
 .filter {
   color: var(--primary-brand);
   background-color: var(--light);
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
 }
 
 .filter:hover,
